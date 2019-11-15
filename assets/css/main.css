@@ -1,9 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600&display=swap');
+
+@font-face {
+  font-family: JJ;
+  src: url(../fonts/jj_rg.woff2) format("woff2"), url(../fonts/jj_rg.woff) format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 10px;
+  height: 100%;
+  font-family: Work Sans, Helvetica, sans-serif;
+  line-height: 24px;
+  font-size: 14px;
+  background-color: #000;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 15px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+  display: inline-block;
+  opacity: 60%;
+}
+
+#menu__elements {
+display: inline-block;
+/*padding-top: 14px;*/
+}
+
+#tw__elements {
+  background-image: url(../img/tw.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 20px;
+}
+
+#tw__elements:hover {
+  color: #A17C8F;
+  opacity: 60%;
+}
+
+
 .item {
   height: auto;
 }
-.item1 { grid-area: a; background-color: palegreen; }
-.item2 { grid-area: b; background-color: blanchedalmond; }
-.item3 { grid-area: c; background-color: palegreen;}
+.item1 { grid-area: a; background-image: url(../img/logo.svg); background-size: contain; background-repeat: no-repeat; height: 50px; }
+.item2 { grid-area: b; padding: 20px auto 20px auto; text-align: center;}
+.item3 { grid-area: c; color: white; text-align: right;}
 .item4 { grid-area: d; background-color: blanchedalmond;}
 .item5 { grid-area: e; background-color: palegreen;}
 .item6 { grid-area: f; background-color: blue;}
@@ -11,23 +72,51 @@
 .item8 { grid-area: h; background-color: blanchedalmond;}
 .item9 { grid-area: j; background-color: palegreen;}
 .item10 { grid-area: k; background-color: blanchedalmond;}
+.item11 { grid-area: he; }
+
+h1 {
+  text-align: left;
+  padding: 40px auto;
+  font-size: 3.7em !important;
+  letter-spacing: .01em;
+  font-family: JJ, sans-serif !important;
+  font-weight: 400;
+  color: white;
+  line-height: 1.2em;
+  margin: 0px;
+}
 
 .container__grid {
   display: grid;
   grid-template-areas:
-    'a a b b b b b b b c c c'
+    'a a a b b b b b b c c c'
+    'he he he he he he . . . . . .';
+  grid-gap: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../img/bgr.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 20px 40px 20px;
+  height: 600px;
+  grid-template-columns: repeat(12,1fr);
+  grid-row: 100px;
+}
+
+.container__grid__hero {
+  display: grid;
+  grid-template-areas:
     'd d d d d d e e e f f f'
     'g g g h h h h h h j j j'
     'k k k k k k k k k k k k';
   grid-gap: 20px;
-  background-color: #2196F3;
+  background-color: #000;
   padding: 10px;
   grid-template-columns: repeat(12,1fr);
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .layout__footer {
-  /*display: inline-grid;*/
   display: inline-grid;
-  grid-area: 
   margin-left: auto;
   margin-right: auto;
   padding: 20px 20px;
@@ -36,35 +125,35 @@
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
-  font-size: 20px;
+  font-size: 13px;
 }
 
-/*.pageLayout__grid-smallSidebar {
-    grid-template-areas:
-        "c1 c1 h h h h h h h h h h"
-        "c c c c c c c c c c c c";
-    background-color: rgba(255, 255, 255, 0.8);
+@media screen and (max-width: 500px) {
+  .container__grid {
+  grid-template-areas:
+    'a a'
+    'b c';
+  grid-gap: 20px;
+  background-image: url(../img/bgr.jpg);
+  padding: 10px;
+  grid-template-columns: repeat(2,1fr);
 }
 
-.container__brand {
-    width: auto;
-    grid-area: a1;
-    background-color: green;
-    height: 50px;
+  .container__grid__hero {
+  grid-template-areas:
+    'e e'
+    'g g'
+    'f f'
+    'h h'
+    'k k';
+  grid-gap: 20px;
+  background-color: #000;
+  padding: 10px;
+  grid-template-columns: repeat(2,1fr);
 }
 
-.pageLayout__grid {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: auto;
-    width: 100%;
-    max-width: 1220px;
-    display: grid;
-    grid-gap: 40px;
-    grid-gap: var(--gridGap);
-    grid-template-columns: repeat(12,1fr);
-}*/
+.item4, .item9 {
+  display: none;
+}
+
+}
