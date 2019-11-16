@@ -15,7 +15,7 @@
 	<meta property="og:image" content="og-image.jpg" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
 	<script src="assets/js/main.js" defer></script>
 </head>
 <body>
@@ -23,37 +23,67 @@
 </head>
 <body>
 	<main>
-		<section class="container">
-			<div class="container__grid">
-				<div class="item1"></div>
-				<div class="item item2"><a href="#" id="menu__elements">Menu</a><a href="#" id="menu__elements">Articles</a>
-				</div>
-				<div class="item item3"><a href="#" id="tw__elements"></a></div>
-				<div class="item item11"><h1>Pluto. <br/>Definition of planet.</h1>
-				</div>
+		<!-- My Header -->
+	</section>
+	<div class="wrapper">
+		<div class="item1"></div>
+		<div class="item2"><a href="#footer" id="menu__elements">Space</a><a href="#footer" id="menu__elements">Mission</a>
+		</div>
+		<div class="item3"><a href="#" id="tw__elements"></a></div>
+		<div class="item11"><h1>Pluto.</h1>
+		</div><div class="item13"><h1><br/>Definition of planet.</h1></div>
+		<div class="item12"><div class="content__fixed"><p>Pluto (minor planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It was the first Kuiper belt object to be discovered and is the largest known plutoid (or ice dwarf). Pluto was discovered by Clyde Tombaugh in 1930 as the ninth planet from the Sun.</p></div></div>
+	</div>
+
+	<!-- My Hero -->
+
+	<div class="container__grid__hero">
+		<div class="item4"><h2>Classification</h2><p>From 1992 onward, many bodies were discovered orbiting in the same volume as Pluto, showing that Pluto is part of a population of objects called the Kuiper belt. This made its official status as a planet controversial, with many questioning whether Pluto should be considered together with or separately from its surrounding population. Museum and planetarium directors occasionally created controversy by omitting Pluto from planetary models of the Solar System.</p>
+		</div>
+		<div class="item5"><h2>News!</h2><p>Be the first, who learn fresh news, great stories and experiments.</p>
+			<a href="#footer" class="button__large__light">Sign Up</a>
+		</div>
+		<div class="item6" id="reklamas__laukums"></div>
+	</div>
+	
+	<div class="container__grid__articles">
+		<div class="item7">
+			<h2>Choices</h2>
+			<div class="div__cont__1__large"><p>It is the ninth-largest and tenth-most-massive known object directly orbiting the Sun. It is the largest known trans-Neptunian object by volume but is less massive than Eris.</p></div>
 			</div>
-			<div class="container__grid__hero">
-				<div class="item item4">2.1. Hero feature</div>
-				<div class="item item5">2.2. Hero CTA</div>
-				<!-- </div> -->
-				<!-- <div class="ad">3.Ad -->
-					<div class="item item6">3.1. ad</div>
-					<!-- </div> -->
-					<!-- <div class="body">4.Body -->
-						<div class="item item7">4.1. Article feature</div>
-						<div class="item item8">4.2. Article listing</div>
-						<!-- </div> -->
-						<!-- <div class="sidebar">5.Sidebar -->
-							<div class="item item9">5.1. Sidebar</div>
-							<!-- </div> -->
-							<!-- <div class="footer">6.Footer -->
-								<div class="item item10">
-									<div class="layout__footer"><p>Just footer. This grid layout contains six columns and three rows. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat id est laborum.</p>
-									</div>
-								</div>
-								<!-- </div> -->
-							</div>
-						</section>
-					</main>
-				</body>
-				</html>
+		<div class="item8">
+			<h2>Orbiting the Sun</h2>
+			<div class="div__pic__cont__large">
+			<div class="div__pic__1__large"></div>
+			<div class="div__cont__1__large"><p>In the 1840s, Urbain Le Verrier used Newtonian mechanics to predict the position of the then-undiscovered planet Neptune after analyzing perturbations in the orbit of Uranus. Subsequent observations of Neptune in the late 19th century led astronomers to speculate that Uranus's orbit was being disturbed by another planet besides Neptune.</p></div>
+			</div>
+			</div>
+		<div class="item14" id="reklamas__laukums__2"></div>
+		<div class="item9" id="sidebar">
+			<h2>See also</h2>
+			<div class="div__pic__cont__small">
+			<div class="div__pic__1"></div>
+			<div class="div__cont__1"><p>It is the ninth-largest and tenth-most-massive known object.</p>
+			</div>
+			</div>
+		<div class="div__pic__cont__small">
+			<div class="div__pic__2"></div>
+			<div class="div__cont__2"><p>It is the largest known trans-Neptunian object by volume.</p></div>
+			</div>
+		<div class="div__pic__cont__small">
+			<div class="div__pic__3"></div>
+			<div class="div__cont__3"><p>It has a moderately eccentric and inclined orbit during.</p></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- My Footer -->
+	<div class="container__grid__footer" id="footer">
+		<div class="item10">
+			<div class="item1"></div>
+			<p>Project Pluto. ©2019</p></div>
+		</div>
+	</div>
+	</main>
+</body>
+</html>
