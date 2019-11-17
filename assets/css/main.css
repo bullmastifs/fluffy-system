@@ -12,7 +12,7 @@
 }
 
 body, html {
-  margin: 20px;
+  margin: 10px;
   height: 100%;
   font-family: Work Sans, Helvetica, sans-serif;
   line-height: 24px;
@@ -86,9 +86,9 @@ a:hover {
   opacity: 60%;
 }
 
-.item1 { grid-area: a; display: inline-grid; background-image: url(../img/logo.svg); background-size: contain; background-position: center; background-repeat: no-repeat; height: 50px; width: 50px; -webkit-animation: spin 44s linear infinite; -moz-animation: spin 44s linear infinite; animation: spin 44s linear infinite; }
-.item2 { grid-area: b; padding: 20px 0px; text-align: center;}
-.item3 { grid-area: c; color: white; text-align: right;}
+.item1 { grid-area: a; display: inline-grid; z-index: 100; background-image: url(../img/logo.svg); background-size: contain; background-position: center; background-repeat: no-repeat; height: 50px; width: 50px; -moz-animation: spin 44s linear infinite; animation: spin 44s linear infinite; }
+.item2 { grid-area: b; padding-top: 20px; text-align: center;}
+.item3 { grid-area: c; padding-top: 20px; color: white; text-align: right;}
 .item4 { grid-area: d; color: #fff; padding-top: 50px; padding-bottom: 50px; }
 .item5 { grid-area: e; color: #fff; padding-top: 50px; padding-bottom: 50px; text-align: left;}
 .item6 { grid-area: f;}
@@ -97,15 +97,13 @@ a:hover {
 .item9 { grid-area: j; color: #fff;}
 .item10 { grid-area: k; color: #fff; text-align:center;}
 .item11 { grid-area: he; position: relative; padding-top: 40px;
-  -webkit-animation-name: fadein; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
   -moz-animation-name: fadein;
   -moz-animation-duration: 3s;
   animation-name: fadein;
   animation-duration: 3s;
   animation-delay: 0s;
   animation-iteration-count: 1;
-  animation-fill-mode: backwards;
+  /*animation-fill-mode: backwards;*/
   transition-timing-function: ease-out;
 }
 
@@ -113,8 +111,6 @@ a:hover {
 }
 
 .item13 { grid-area: he; position: relative; padding-top: 40px;
-  -webkit-animation-name: fadein; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
   -moz-animation-name: fadein;
   -moz-animation-duration: 3s;
   animation-name: fadein;
@@ -236,6 +232,41 @@ a:hover {
   margin: 20px 0px 20px 0px;
 }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 42px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #ddd;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 45px;
+  right: 35px;
+  font-size: 25px;
+  margin-left: 25px;
+}
+
 .content__fixed {
   position: relative;
   text-align: left;
@@ -243,14 +274,7 @@ a:hover {
 
 /*Animations*/
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes fadein {
-  0% {opacity: 1%; bottom: -40px;}
-  100% {opacity: 100%; bottom:0px;}
-}
 
 /* Standard syntax */
 @keyframes fadein {
@@ -389,6 +413,9 @@ ul, ol {
     line-height: 26px;
     font-size: 18px;
   }
+  
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 15px;}
 
   h1 {
     font-size: 3.2em;
@@ -456,6 +483,9 @@ ul, ol {
     padding: 0;
   }
 
+  .sidenav {padding-top: 150px;}
+  .sidenav a {font-size: 16px;}
+
   .wrapper {
     display: grid;
     grid-template-areas:
@@ -470,6 +500,20 @@ ul, ol {
     padding: 5px;
     /*grid-row: 100px;*/
   }
+
+
+/* Standard syntax */
+@keyframes fadein {
+  0% {opacity: 1%; bottom: -40px;}
+  100% {opacity: 100%; bottom:0px;}
+}
+
+/* Moz syntax */
+@-moz-keyframes fadein {
+  0% {opacity: 1%; bottom: -40px;}
+  100% {opacity: 100%; bottom:0px;}
+}
+
 
   .item3 {
     display: none;

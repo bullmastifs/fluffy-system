@@ -13,16 +13,11 @@ $(document).ready(function(){
   });
 });
 
-//change background colors
-function myFunction() {
-    document.body.style.backgroundColor = "#b2b2b2";
+//side menu
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
 }
-function myFunction1() {
-    document.body.style.backgroundColor = "#eaeaea";
-}
-function myFunction2() {
-    document.body.style.backgroundColor = "#fff";
-}
-function myFunction3() {
-    document.body.style.backgroundColor = "#b8e1f5";
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }
