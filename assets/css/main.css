@@ -99,11 +99,13 @@ a:hover {
 .item11 { grid-area: he; position: relative; padding-top: 40px;
   -moz-animation-name: fadein;
   -moz-animation-duration: 3s;
+  -webkit-animation-name: fadein; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
   animation-name: fadein;
   animation-duration: 3s;
   animation-delay: 0s;
   animation-iteration-count: 1;
-  /*animation-fill-mode: backwards;*/
+  animation-fill-mode: backwards;
   transition-timing-function: ease-out;
 }
 
@@ -111,6 +113,8 @@ a:hover {
 }
 
 .item13 { grid-area: he; position: relative; padding-top: 40px;
+  -webkit-animation-name: fadein; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
   -moz-animation-name: fadein;
   -moz-animation-duration: 3s;
   animation-name: fadein;
@@ -274,23 +278,23 @@ a:hover {
 
 /*Animations*/
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-/* Standard syntax */
-@-webkit-keyframes fadein {
-  0% { -webkit-opacity: 1%; bottom: -40px;}
-  100% { -webkit-opacity: 100%; bottom:0px;}
-}
-
 @keyframes fadein {
-  0% {opacity: 1%; bottom: -40px;}
-  100% {opacity: 100%; bottom:0px;}
+  from {opacity: 0; top:200px;}
+  to {opacity: 100;}
 }
 
-/* Moz syntax */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 100;}
+}
+
 @-moz-keyframes fadein {
-  0% {opacity: 1%; bottom: -40px;}
-  100% {opacity: 100%; bottom:0px;}
+  from {opacity: 0;}
+  to {opacity: 100;}
 }
 
 .wrapper {
