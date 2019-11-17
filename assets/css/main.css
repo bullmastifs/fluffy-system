@@ -579,7 +579,7 @@ ul, ol {
     'he he'
     'ab ab';
     grid-gap: 20px;
-    grid-template-rows: 35% 40% 40%; 
+    grid-template-rows: 250px auto; 
     grid-template-columns: repeat(2,1fr);
     z-index: 1;
     padding: 30px;
@@ -615,9 +615,7 @@ ul, ol {
   }
 
   .item13 {
-    display: block;
-    font-size: .4em;
-    top: 50px;
+    display: none;
   }
 
   #menu__elements {
