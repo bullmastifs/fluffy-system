@@ -370,6 +370,10 @@ ul, ol {
   padding: 0px 0px 0px 20px;
 }
 
+  #reklamas__laukums__2 {
+    display: none;
+  }
+
 @media screen and (max-width: 992px) {
   body, html {
     line-height: 26px;
@@ -427,6 +431,10 @@ ul, ol {
 
   #reklamas__laukums {
     display: none;
+  }
+
+  #reklamas__laukums__2 {
+    display: block;
   }
 }
 
