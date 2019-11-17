@@ -3,7 +3,7 @@
 @font-face {
   font-family: JJ;
   src: url(../fonts/jj_rg.woff2) format("woff2"), url(../fonts/jj_rg.woff) format("woff");
-  font-weight: 500;
+  font-weight: 700;
   font-display: swap;
 }
 
@@ -86,8 +86,8 @@ a:hover {
   opacity: 60%;
 }
 
-.item1 { grid-area: a; display: inline-grid; padding-left: auto; padding-right: auto;  background-image: url(../img/logo.svg); background-size: contain; background-position: center; background-repeat: no-repeat; height: 50px; width: 50px; -webkit-animation: spin 44s linear infinite; -moz-animation: spin 44s linear infinite; animation: spin 44s linear infinite; }
-.item2 { grid-area: b; padding: 20px auto; text-align: center;}
+.item1 { grid-area: a; display: inline-grid; background-image: url(../img/logo.svg); background-size: contain; background-position: center; background-repeat: no-repeat; height: 50px; width: 50px; -webkit-animation: spin 44s linear infinite; -moz-animation: spin 44s linear infinite; animation: spin 44s linear infinite; }
+.item2 { grid-area: b; padding: 20px 0px; text-align: center;}
 .item3 { grid-area: c; color: white; text-align: right;}
 .item4 { grid-area: d; color: #fff; padding-top: 50px; padding-bottom: 50px; }
 .item5 { grid-area: e; color: #fff; padding-top: 50px; padding-bottom: 50px; text-align: left;}
@@ -99,6 +99,8 @@ a:hover {
 .item11 { grid-area: he; position: relative; padding-top: 40px;
   -webkit-animation-name: fadein; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  -moz-animation-name: fadein;
+  -moz-animation-duration: 3s;
   animation-name: fadein;
   animation-duration: 3s;
   animation-delay: 0s;
@@ -113,6 +115,8 @@ a:hover {
 .item13 { grid-area: he; position: relative; padding-top: 40px;
   -webkit-animation-name: fadein; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  -moz-animation-name: fadein;
+  -moz-animation-duration: 3s;
   animation-name: fadein;
   animation-duration: 3s;
   animation-delay: 1s;
@@ -206,6 +210,7 @@ a:hover {
 
 .div__pic__cont__large {
   display: inline-grid;
+  grid-gap: 20px;
 }
 
 .div__pic__1__large {
@@ -228,7 +233,7 @@ a:hover {
 .div__cont__1__large {
   display: inline-grid;
   grid-column: 1;
-  margin-left: 20px 0px 20px 0px
+  margin-left: 20px, 0px, 20px, 0px;
 }
 
 .content__fixed {
@@ -249,6 +254,12 @@ a:hover {
 
 /* Standard syntax */
 @keyframes fadein {
+  0% {opacity: 1%; bottom: -40px;}
+  100% {opacity: 100%; bottom:0px;}
+}
+
+/* Moz syntax */
+@-moz-keyframes fadein {
   0% {opacity: 1%; bottom: -40px;}
   100% {opacity: 100%; bottom:0px;}
 }
@@ -275,19 +286,19 @@ a:hover {
 
 h1 {
   text-align: left;
-  padding: 40px auto;
+  padding: 40px, 0px;
   font-size: 4.6em;
   letter-spacing: .01em;
   font-family: JJ, sans-serif !important;
   font-weight: 400;
-  color: white;
+  color: #ddd;
   line-height: 1.2em;
   margin: 0px;
 }
 
 h2 {
   text-align: left;
-  letter-spacing: .05em;
+  letter-spacing: .01em;
   font-size: 2em !important;
   font-family: JJ, sans-serif !important;
   line-height: 42px;
@@ -334,7 +345,6 @@ h2 {
   border-color: #ddd;
   margin-left: auto;
   margin-right: auto;
-}
 }
 
 .grid-container > div {
@@ -436,6 +446,8 @@ ul, ol {
   #reklamas__laukums__2 {
     display: block;
   }
+
+
 }
 
 @media screen and (max-width: 576px) {
