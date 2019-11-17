@@ -233,7 +233,7 @@ a:hover {
 .div__cont__1__large {
   display: inline-grid;
   grid-column: 1;
-  margin-left: 20px, 0px, 20px, 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 .content__fixed {
@@ -286,7 +286,7 @@ a:hover {
 
 h1 {
   text-align: left;
-  padding: 40px, 0px;
+  padding: 40px 20px;
   font-size: 4.6em;
   letter-spacing: .01em;
   font-family: JJ, sans-serif !important;
