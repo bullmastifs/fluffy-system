@@ -516,7 +516,7 @@ ul, ol {
     '. . . . . . . . . . . .'
     '. . . . cr cr cr cr cr cr cr cr';
     grid-gap: 20px;
-    grid-template-rows: 200px 200px 200px%; 
+    grid-template-rows: 200px 200px 200px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(../img/bgr5.jpg);
     background-size: cover;
     grid-template-columns: repeat(12,1fr);
