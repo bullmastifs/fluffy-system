@@ -261,7 +261,7 @@ a:hover {
 
 .sidenav .closebtn {
   position: absolute;
-  top: 45px;
+  top: 32px;
   right: 35px;
   font-size: 24px;
   margin-left: 30px;
@@ -277,6 +277,11 @@ a:hover {
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 /* Standard syntax */
+@-webkit-keyframes fadein {
+  0% { -webkit-opacity: 1%; bottom: -40px;}
+  100% { -webkit-opacity: 100%; bottom:0px;}
+}
+
 @keyframes fadein {
   0% {opacity: 1%; bottom: -40px;}
   100% {opacity: 100%; bottom:0px;}
