@@ -84,7 +84,7 @@ a:hover {
   opacity: 60%;
 }
 
-.item1 { grid-area: a; display: inline-grid; z-index: 100; background-image: url(../img/logo.svg); background-size: contain; background-position: center; background-repeat: no-repeat; height: 50px; width: 50px; -moz-animation: spin 44s linear infinite; animation: spin 44s linear infinite; }
+.item1 { grid-area: a; display: inline-grid; z-index: 200; background-image: url(../img/logo.svg); background-size: contain; background-position: center; background-repeat: no-repeat; height: 50px; width: 50px; -moz-animation: spin 44s linear infinite; animation: spin 44s linear infinite; }
 .item2 { grid-area: b; padding-top: 20px; text-align: center; }
 .item3 { grid-area: c; padding-top: 20px; color: white; text-align: right;}
 .item4 { grid-area: d; color: #fff; padding-top: 50px; padding-bottom: 50px; }
@@ -241,7 +241,7 @@ a:hover {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 20;
   top: 0;
   right: 0;
   background-color: #000;
@@ -679,5 +679,9 @@ ul, ol {
     padding: 0px;
     display: none;
     margin-right: 0px;
+  }
+
+  #logotips {
+    z-index: 2000;
   }
 }

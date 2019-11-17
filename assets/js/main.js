@@ -13,6 +13,11 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $("#mySidenav").on('click', function(event) {console.log("closing");    
+    closeNav();});
+});
+
 //side menu
 function openNav() {
   document.getElementById("mySidenav").style.width = "100%";
