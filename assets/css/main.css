@@ -302,19 +302,19 @@ a:hover {
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 @keyframes fadein {
-  from {opacity: 0%;}
-  to {opacity: 100%;}
+  from {opacity: 0.0;}
+  to {opacity: 1.0;}
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes fadein {
-  from {-webkit-opacity: 0%;}
-  to {-webkit-opacity: 100%;}
+  from {-webkit-opacity: 0.0;}
+  to {-webkit-opacity: 1.0;}
 }
 
 @-moz-keyframes fadein {
-  from {-moz-opacity: 0%;}
-  to {-moz-opacity: 100%;}
+  from {-moz-opacity: 0.0;}
+  to {-moz-opacity: 1.0;}
 }
 
 h1 {
