@@ -353,6 +353,9 @@ h2 {
   background-repeat: no-repeat;
   padding: 20px 20px 0px 20px;
   height: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   grid-template-columns: repeat(12,1fr);
   z-index: 1;
   /*grid-row: 100px;*/
@@ -401,6 +404,9 @@ h2 {
   background-position: top;
   background-repeat: no-repeat;
   padding: 20px 20px 0px 20px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container__grid__footer {
@@ -413,6 +419,7 @@ h2 {
   grid-template-columns: repeat(12,1fr);
   /*border-top: 2px solid;*/
   border-color: #ddd;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -535,17 +542,17 @@ ul, ol {
   }
 
   .container__grid__footer {
-  display: grid;
-  grid-template-areas:
-  'k';
-  grid-gap: 20px;
-  background-color: #000;
-  padding: 100px 20px 100px 20px;
-  grid-template-columns: 1fr;
-  border-color: #ddd;
-  margin-left: auto;
-  margin-right: auto;
-}
+    display: grid;
+    grid-template-areas:
+    'k';
+    grid-gap: 20px;
+    background-color: #000;
+    padding: 100px 20px 100px 20px;
+    grid-template-columns: 1fr;
+    border-color: #ddd;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   #reklamas__laukums {
     display: none;
